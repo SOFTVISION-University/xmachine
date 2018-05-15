@@ -1,0 +1,12 @@
+{
+  "namespace": "App",
+  "fsNamespace": "app",
+  "loader": "../app.js",
+  "core": "app.core.js",
+  "corePolyfilled": "app.core.pf.js",
+  "components": {
+    "light-machine": {
+      "$": "light-machine"
+    }
+  }
+}
