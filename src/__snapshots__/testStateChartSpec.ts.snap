@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`State chart should test lightMachine in all possible states: current state - "green" 1`] = `
+Object {
+  "color": "green",
+}
+`;
+
+exports[`State chart should test lightMachine in all possible states: current state - "red" 1`] = `
+Object {
+  "color": "green",
+}
+`;
+
+exports[`State chart should test lightMachine in all possible states: current state - "yellow" 1`] = `
+Object {
+  "color": "yellow",
+}
+`;

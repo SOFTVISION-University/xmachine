@@ -1,0 +1,66 @@
+{
+  "name": "xmachine",
+  "version": "0.0.1",
+  "description": "A xstate wrapper for ES6 classes",
+  "main": "src/index.ts",
+  "types": "./typings/src/index.d.ts",
+  "scripts": {
+    "test": "cross-env JEST_JUNIT_OUTPUT=./test-results.xml jest --config jest.config.js",
+    "build": "webpack --config webpack.config.dev.js",
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
+    "clean": "rm -rf ./dist",
+    "prettier": "prettier --write \"src/**/*.{ts,tsx,scss,json,js}\"",
+    "prerelease": "run-s clean bootstrap-build-prod",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CosminIonascu/xmachine.git"
+  },
+  "keywords": [
+    "xstate",
+    "xmachine",
+    "state machine"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CosminIonascu/xmachine/issues"
+  },
+  "homepage": "https://github.com/CosminIonascu/xmachine#readme",
+  "devDependencies": {
+    "@storybook/react": "^3.4.4",
+    "@types/enzyme": "^3.1.10",
+    "@types/jest": "^22.2.3",
+    "awesome-typescript-loader": "^3.3.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "cross-env": "^5.1.5",
+    "enzyme": "^3.3.0",
+    "enzyme-to-json": "^3.3.3",
+    "jest": "^22.4.3",
+    "jest-cli": "^22.4.3",
+    "jest-junit": "^3.7.0",
+    "mobx": "^4.2.1",
+    "mobx-react": "^5.1.2",
+    "raw-loader": "^0.5.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-test-renderer": "^16.3.2",
+    "styled-components": "^3.2.6",
+    "ts-jest": "^22.4.6",
+    "tslint": "^5.10.0",
+    "typescript": "^2.8.3",
+    "webpack": "^3.8.1",
+    "webpack-merge": "^4.1.2"
+  },
+  "dependencies": {
+    "xstate": "^3.2.1"
+  }
+}
