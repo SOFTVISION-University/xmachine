@@ -28,12 +28,9 @@ export class LightMachineContainer extends React.Component<{}, {color: string; s
     }
 
     public colorGreen = () => {
-        // this.setState({
-        //     color: 'green'
-        // });
-        this.state = {
+        this.setState({
             color: 'green'
-        }
+        });
     }
 
     public colorYellow = () => {
