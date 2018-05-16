@@ -1,6 +1,6 @@
 {
   "name": "xmachine",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "A xstate wrapper for ES6 classes",
   "main": "./dist/bundle.js",
   "types": "./typings/src/index.d.ts",
@@ -8,9 +8,8 @@
     "test": "cross-env JEST_JUNIT_OUTPUT=./test-results.xml jest --config jest.config.js",
     "build": "webpack --config webpack.config.dev.js",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
-    "clean": "rm -rf ./dist",
     "prettier": "prettier --write \"src/**.{ts,tsx,scss,json,js}\"",
-    "prerelease": "run-s clean bootstrap-build-prod",
+    "prepare": "npm run test && npm run tslint && npm run build:prod",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "tslint": "tslint --project ./tsconfig.json -e \"**/*.d.ts\" --force"
