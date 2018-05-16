@@ -1,6 +1,6 @@
 # xstate wrapper for ES6 classes
 
-A state machine wrapper that use[xState](https://github.com/davidkpiano/xstate) to add finite state machine functionality to es6 classes.
+A state machine wrapper that use [xState](https://github.com/davidkpiano/xstate) to add finite state machine functionality to es6 classes.
 
 ## Getting Started
 
