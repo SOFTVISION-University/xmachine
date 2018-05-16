@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CosminIonascu/xmachine.git"
+    "url": "git+https://github.com/SOFTVISION-University/xmachine.git"
   },
   "keywords": [
     "xstate",
