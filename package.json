@@ -1,18 +1,18 @@
 {
   "name": "xmachine",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "A xstate wrapper for ES6 classes",
-  "main": "src/index.ts",
+  "main": "./dist/bundle.js",
   "types": "./typings/src/index.d.ts",
   "scripts": {
     "test": "cross-env JEST_JUNIT_OUTPUT=./test-results.xml jest --config jest.config.js",
     "build": "webpack --config webpack.config.dev.js",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
-    "clean": "rm -rf ./dist",
-    "prettier": "prettier --write \"src/**/*.{ts,tsx,scss,json,js}\"",
-    "prerelease": "run-s clean bootstrap-build-prod",
+    "prettier": "prettier --write \"src/**.{ts,tsx,scss,json,js}\"",
+    "prepare": "npm run test && npm run tslint && npm run build:prod",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "tslint": "tslint --project ./tsconfig.json -e \"**/*.d.ts\" --force"
   },
   "repository": {
     "type": "git",
@@ -56,11 +56,15 @@
     "styled-components": "^3.2.6",
     "ts-jest": "^22.4.6",
     "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.12.0",
+    "tslint-eslint-rules": "^5.3.1",
+    "tslint-microsoft-contrib": "^5.0.3",
     "typescript": "^2.8.3",
     "webpack": "^3.8.1",
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
+    "prettier": "^1.12.1",
     "xstate": "^3.2.1"
   }
 }

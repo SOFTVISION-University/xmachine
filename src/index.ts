@@ -1,2 +1,2 @@
-export { machine } from './Machine';
+export { machine } from './machine';
 export { testStateChart } from './testStateChart';

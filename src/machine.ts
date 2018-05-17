@@ -1,15 +1,15 @@
 import { Machine } from 'xstate';
-import { MachineConfig, StandardMachine } from 'xstate/lib/types';
 
-const machine = (statechart: MachineConfig | StandardMachine) => {
+// tslint:disable:no-any
+const machine = (statechart: any) => {
     // tslint:disable-next-line:no-reserved-keywords
     function classDecorator<T extends { new (...args: any[]): {} }>(constructor: T) {
         return class extends constructor {
             public fsm = statechart instanceof Machine ? statechart : Machine(statechart);
-            public currentState = (<StandardMachine>this.fsm).initialState.value;
+            public currentState = (this.fsm).initialState.value;
             constructor(...args: any[]) {
                 super();
-                this.runActions((<StandardMachine>this.fsm).initialState, {});
+                this.runActions((this.fsm).initialState, {});
             }
             public getMachine() {
                 return this.fsm;
@@ -26,7 +26,11 @@ const machine = (statechart: MachineConfig | StandardMachine) => {
                 });
             }
             public transition = (event: string, eventValue: {}) => {
-                const newState = (<StandardMachine>this.fsm).transition(this.currentState, event, eventValue);
+                const newState = (this.fsm).transition(
+                    this.currentState,
+                    event,
+                    eventValue
+                );
                 this.currentState = newState.value;
                 this.runActions(newState, eventValue);
             };
