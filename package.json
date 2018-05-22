@@ -1,6 +1,6 @@
 {
   "name": "xmachine",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A xstate wrapper for ES6 classes",
   "main": "./dist/bundle.js",
   "types": "./typings/src/index.d.ts",
