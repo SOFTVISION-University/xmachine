@@ -3,13 +3,13 @@
   "version": "0.1.8",
   "description": "A xstate wrapper for ES6 classes",
   "main": "./dist/bundle.js",
-  "types": "./typings/src/index.d.ts",
+  "types": "./typings/index.d.ts",
   "scripts": {
     "test": "cross-env JEST_JUNIT_OUTPUT=./test-results.xml jest --config jest.config.js",
     "build": "webpack --config webpack.config.dev.js",
     "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "prettier": "prettier --write \"src/**.{ts,tsx,scss,json,js}\"",
-    "prepublishOnly": "npm run quick-build && npm run test && npm run tslint && npm run build:prod",
+    "prepublishOnly": "npm run test && npm run tslint && npm run build:prod && npm run quick-build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "tslint": "tslint --project ./tsconfig.json -e \"**/*.d.ts\" --force",
@@ -34,6 +34,7 @@
     "@storybook/react": "^3.4.4",
     "@types/enzyme": "^3.1.10",
     "@types/jest": "^22.2.3",
+    "@types/react": "^16.3.14",
     "awesome-typescript-loader": "^3.3.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -67,5 +68,5 @@
   "dependencies": {
     "xstate": "^3.2.1"
   },
-  "module": "./dist/src/index.js"
+  "module": "./dist/index.js"
 }

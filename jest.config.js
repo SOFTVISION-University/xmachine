@@ -7,7 +7,7 @@ module.exports = {
         '^.+\\.js$': '<rootDir>/node_modules/babel-jest',
         '.(ts|tsx)': './node_modules/ts-jest/preprocessor.js'
     },
-    testRegex: '^(((?!(AccessibilitySpec|ViewSpec)).)*Spec).*\\.(ts|tsx)$',
+    testRegex: '^(.*Spec).*\\.(ts|tsx)$',
     testResultsProcessor: './node_modules/jest-junit',
     collectCoverage: true,
     coverageReporters: ['cobertura', 'json', 'lcov'],

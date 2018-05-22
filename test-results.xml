@@ -1,5 +1,5 @@
-<testsuites name="jest tests" tests="1" failures="0" time="1.392">
-  <testsuite name="State chart" errors="0" failures="0" skipped="0" timestamp="2018-05-21T15:52:00" time="1.392" tests="1">
+<testsuites name="jest tests" tests="1" failures="0" time="0.826">
+  <testsuite name="State chart" errors="0" failures="0" skipped="0" timestamp="2018-05-22T08:39:54" time="0.826" tests="1">
     <testcase classname="State chart should test lightMachine in all possible states" name="State chart should test lightMachine in all possible states" time="0.008">
     </testcase>
   </testsuite>
