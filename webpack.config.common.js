@@ -36,7 +36,7 @@ module.exports = {
                 loaders: [
                     `awesome-typescript-loader?useBabel`
                 ],
-                exclude: /(node_modules|dist|examples)/
+                exclude: /(node_modules|dist)/
             },
             {
                 test: /\.md$/,

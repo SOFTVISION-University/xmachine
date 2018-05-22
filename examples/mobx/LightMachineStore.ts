@@ -7,7 +7,7 @@ import { lightMachine } from '../stateChart';
 export class LightMachineStore {
     private transition: Function;
 
-    constructor() {
+    constructor(test: string) {
         this.startCountdown();
     }
 
