@@ -9,6 +9,6 @@ storiesOf('Light Machine', module)
         return <LightMachineContainer />;
     })
     .add('Light Machine with mobx', () => {
-        const lightMachineStore = new LightMachineStore();
+        const lightMachineStore = new LightMachineStore('test');
         return <LightMachineMobx lightMachineStore={lightMachineStore}/>;
     });

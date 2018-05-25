@@ -6,7 +6,7 @@ export interface IFixtures {
     [key: string]: any;
 }
 
-export const testStateChart = (
+const testStateChart = (
     classInstance: { [key: string]: any },
     fixtures: IFixtures = {},
     keysToCapture = Object.keys(classInstance)
@@ -25,3 +25,5 @@ export const testStateChart = (
         expect(snapshot).toMatchSnapshot(`current state - ${key}`);
     });
 };
+
+export {testStateChart as testStateChart};

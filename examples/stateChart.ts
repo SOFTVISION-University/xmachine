@@ -1,6 +1,6 @@
 import { Machine } from 'xstate';
 
-export const lightMachineStateChart = {
+const lightMachineStateChart = {
     key: 'light',
     initial: 'green',
     states: {
@@ -25,4 +25,7 @@ export const lightMachineStateChart = {
     }
 };
 
-export const lightMachine = Machine(lightMachineStateChart);
+// tslint:disable-next-line:no-any
+const lightMachine: any = Machine(lightMachineStateChart);
+
+export {lightMachineStateChart, lightMachine};

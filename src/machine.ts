@@ -8,7 +8,7 @@ const machine = (statechart: any) => {
             public fsm = statechart instanceof Machine ? statechart : Machine(statechart);
             public currentState = (this.fsm).initialState.value;
             constructor(...args: any[]) {
-                super();
+                super(...args);
                 this.runActions((this.fsm).initialState, {});
             }
             public getMachine() {
@@ -39,4 +39,4 @@ const machine = (statechart: any) => {
 
     return classDecorator;
 };
-export { machine };
+export { machine as machine };

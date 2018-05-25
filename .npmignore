@@ -1,3 +1,5 @@
-src
+./src
 node_modules
 examples
+.storybook
+coverage
